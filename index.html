@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+      <title>주식 | 코인 정보 분석</title>
+   </head>
+   <body>
+      <header class="bg-primary text-white text-center py-4">
+         <h1>주식, 코인 실시간 분석</h1>
+      </header>
+      <main class="container my-5">
+         <div class="row">
+            <!-- TSLA 정보 카드 -->
+            <div class="col-md-4 mb-4">
+               <div class="card stock-card" onclick="toggleTable('stock-table-tsla')">
+                  <div class="card-body text-center">
+                     <!-- TSLA 로고 이미지 추가 -->
+                     <img src="./image/Tesla.png" alt="TSLA 로고" class="brand-logo" />
+                     <h5 class="card-title mt-3">TSLA 정보</h5>
+                     <p class="card-text">실시간 TSLA 정보를 확인하세요.</p>
+                  </div>
+               </div>
+               <div class="table-container" id="stock-table-tsla" style="display: none">
+                  <h6>📈주식 신호</h6>
+                  <ul id="stock-signals-tsla"></ul>
+                  <h6>📊주식 지표 계산</h6>
+                  <ul id="stock-indicators-tsla"></ul>
+                  <h6>📰뉴스 감성 분석</h6>
+                  <ul id="stock-sentiments-tsla"></ul>
+               </div>
+            </div>
+
+            <!-- NVDA 정보 카드 -->
+            <div class="col-md-4 mb-4">
+               <div class="card stock-card" onclick="toggleTable('stock-table-nvda')" style="height: 260px">
+                  <div class="card-body text-center">
+                     <!-- NVDA 로고 이미지 추가 -->
+                     <img src="./image/nvidia.png" alt="NVDA 로고" class="brand-logo" style="width: 150px" />
+                     <h5 class="card-title mt-3">NVDA 정보</h5>
+                     <p class="card-text">실시간 NVDA 정보를 확인하세요.</p>
+                  </div>
+               </div>
+               <div class="table-container" id="stock-table-nvda" style="display: none">
+                  <h6>📈주식 신호</h6>
+                  <ul id="stock-signals-nvda"></ul>
+                  <h6>📊주식 지표 계산</h6>
+                  <ul id="stock-indicators-nvda"></ul>
+                  <h6>📰뉴스 감성 분석</h6>
+                  <ul id="stock-sentiments-nvda"></ul>
+               </div>
+            </div>
+
+            <!-- 코인 수익률 카드 -->
+            <div class="col-md-4 mb-4">
+               <div class="card coin-card" onclick="toggleTable('coin-table')">
+                  <div class="card-body text-center">
+                     <!-- Upbit 로고 이미지 추가 -->
+                     <img src="./image/upbit.png" alt="코인 수익률 로고" class="brand-logo" />
+                     <h5 class="card-title mt-3">코인 수익률</h5>
+                     <p class="card-text">실시간 코인 수익률을 확인하세요.</p>
+                  </div>
+               </div>
+               <div class="table-container" id="coin-table" style="display: none">
+                  <h6>총 포트폴리오 수익률</h6>
+                  <p id="coin-return"></p>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
+   </body>
+</html>

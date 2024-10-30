@@ -1,11 +1,11 @@
 async function fetchStockData() {
-   const response = await fetch('https://3.22.175.40:5000/api/stock')
+   const response = await fetch('http://3.22.175.40:5000/api/stock')
    const data = await response.json()
    return data
 }
 
 async function fetchCoinData() {
-   const response = await fetch('https://3.22.175.40:5000/api/coin')
+   const response = await fetch('http://3.22.175.40:5000/api/coin')
    const data = await response.json()
    return data
 }
